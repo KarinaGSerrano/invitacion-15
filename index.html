@@ -90,18 +90,18 @@
       const myAudio = document.getElementById('myAudio');
 
       // Rutas de los iconos
-      const playIconPath = 'assets/img/icon-music.svg'; // Icono de play
-      const pauseIconPath = 'assets/img/icon-music-pause.svg'; // Icono de pausa
+      const playIconPath = 'assets/img/icon-music.svg';
+      const pauseIconPath = 'assets/img/icon-music-pause.svg';
 
       playBtn.addEventListener('click', function () {
         if (myAudio.paused) {
           myAudio.play();
-          playIcon.src = pauseIconPath; // Cambia a icono de pausa
-          playIcon.alt = 'Pausar'; // Cambia el texto alternativo
+          playIcon.src = pauseIconPath;
+          playIcon.alt = 'Pausar';
         } else {
           myAudio.pause();
-          playIcon.src = playIconPath; // Cambia a icono de play
-          playIcon.alt = 'Reproducir'; // Cambia el texto alternativo
+          playIcon.src = playIconPath;
+          playIcon.alt = 'Reproducir';
         }
       });
     </script>
