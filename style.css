@@ -1,0 +1,45 @@
+/* PALETA DE COLORES */
+
+.color-1 {
+  background: #900590;
+}
+
+.color-2 {
+  background: #5a9e98;
+}
+
+.color-3 {
+  background: hsl(14, 56%, 59%);
+}
+
+.color-4 {
+  color: #faf1e9;
+  filter: drop-shadow(0 3px 6px rgba(25, 2, 2, 0.871));
+}
+
+.color-5 {
+  color: #452a2d;
+  background: hsl(5, 52%, 65%) url('assets/img/grano-vintage2.png');
+  background-size: contain;
+  /* background: hsl(5, 52%, 65%); */
+  filter: drop-shadow(0 3px 4px rgba(25, 2, 2, 0.623));
+}
+
+/* OTROS */
+
+body {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.bg-web {
+  background: #452a2d url('assets/img/grano-vintage2.png');
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+.btn-1 {
+  filter: drop-shadow(-4px 1px 3px rgba(25, 2, 2, 0.727));
+}
