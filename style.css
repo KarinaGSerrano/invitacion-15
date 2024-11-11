@@ -1,25 +1,25 @@
 /* PALETA DE COLORES */
 
 .color-1 {
-  background: #900590;
+  background: #dc9dbe;
 }
 
 .color-2 {
-  background: #5a9e98;
+  background: #9ae7e0;
 }
 
 .color-3 {
-  background: hsl(14, 56%, 59%);
+  background: hsl(14, 44%, 70%);
 }
 
 .color-4 {
-  color: #faf1e9;
-  filter: drop-shadow(0 3px 6px rgba(25, 2, 2, 0.871));
+  color: #8d5b70;
+  filter: drop-shadow(0 3px 6px rgba(148, 140, 124, 0.871));
 }
 
 .color-5 {
   color: #452a2d;
-  background: hsl(5, 52%, 65%) url('assets/img/grano-vintage2.png');
+  background: hsl(4, 37%, 71%) url('assets/img/grano-vintage2.png');
   background-size: contain;
   /* background: hsl(5, 52%, 65%); */
   filter: drop-shadow(0 3px 4px rgba(25, 2, 2, 0.623));
@@ -34,7 +34,7 @@ body {
 }
 
 .bg-web {
-  background: #452a2d url('assets/img/grano-vintage2.png');
+  background: #e3ddd0 url('assets/img/grano-vintage2.png');
   background-blend-mode: overlay;
   background-size: cover;
   background-repeat: repeat;
