@@ -37,6 +37,10 @@ body {
   background: #f3edea;
 }
 
+.sombra-1 {
+  filter: drop-shadow(0 5px 20px rgba(255, 238, 253, 0.83));
+}
+
 /* .bg-web {
   background: #e3ddd0 url('assets/img/grano-vintage2.png');
   background-blend-mode: overlay;
