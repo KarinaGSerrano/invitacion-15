@@ -29,6 +29,15 @@
   color: #ad8a7f;
 }
 
+.color-7 {
+  color: #745349;
+}
+
+.color-8 {
+  color: hsl(6, 36%, 66%);
+  filter: drop-shadow(0 3px 4px rgba(255, 244, 227, 0.898));
+}
+
 /* FUENTES */
 
 .fuente-1 {
@@ -64,6 +73,10 @@
   font-size: 1.1rem;
 }
 
+.size-6 {
+  font-size: 1.7rem;
+}
+
 /* BORDES */
 .borde-1 {
   border: 3px solid #ce959360;
@@ -81,8 +94,19 @@
   background: #f3edea;
 }
 
+.bg-web-1 {
+  background: linear-gradient(
+    180deg,
+    rgba(232, 212, 212, 1) 9%,
+    rgba(240, 229, 226, 1) 22%,
+    rgba(243, 237, 234, 1) 50%,
+    rgba(240, 229, 227, 1) 74%,
+    rgba(232, 212, 212, 1) 91%
+  );
+}
+
 .sombra-1 {
-  filter: drop-shadow(0 5px 20px rgba(255, 238, 253, 0.83));
+  filter: drop-shadow(0 3px 10px rgba(255, 238, 249, 0.972));
 }
 
 .sombra-2 {
