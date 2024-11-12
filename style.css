@@ -77,6 +77,10 @@
   font-size: 1.7rem;
 }
 
+.size-7 {
+  font-size: 1.2rem;
+}
+
 /* BORDES */
 .borde-1 {
   border: 3px solid #ce959360;
