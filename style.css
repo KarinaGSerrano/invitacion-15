@@ -34,12 +34,44 @@ body {
 }
 
 .bg-web {
+  background: #f6f5f2;
+}
+
+/* .bg-web {
   background: #e3ddd0 url('assets/img/grano-vintage2.png');
   background-blend-mode: overlay;
   background-size: cover;
   background-repeat: repeat;
-}
+} */
+
+/* .bg-web {
+  width: 100vw;
+  height: 100vh;
+  background: url('assets/img/fondo-1.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
 
 .btn-1 {
   filter: drop-shadow(-4px 1px 3px rgba(25, 2, 2, 0.727));
+}
+
+/* Línea vertical izquierda */
+.linea-izquierda {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background-color: black;
+}
+
+/* Línea vertical derecha */
+.linea-derecha {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background-color: black;
 }
