@@ -34,7 +34,7 @@ body {
 }
 
 .bg-web {
-  background: #f6f5f2;
+  background: #f3edea;
 }
 
 /* .bg-web {
@@ -64,4 +64,55 @@ body {
 
 .size-2 {
   font-size: 2rem;
+}
+
+/* ANIMACION */
+
+.animate__fadeInUp {
+  animation-duration: 2s;
+}
+
+/* .animate__animated {
+  animation-duration: 20s;
+} */
+
+.animate__pulse {
+  animation-duration: 2s;
+  animation-delay: s;
+  animation-timing-function: ease-in-out;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+/* Clases de animación para fadeInUp */
+.animate__animated {
+  animation-duration: 1s; /* Ajusta el tiempo de animación si es necesario */
+}
+
+/* escalera */
+
+/* SELECTORES ANIMACION ESCALERA */
+
+.escalera {
+  opacity: 0; /* Elemento invisible al principio */
+  transform: translateY(30px); /* Inicialmente, desplazados hacia abajo */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Animaciones suaves */
+}
+
+/* Animación para la primera escalera */
+.escalera-1 {
+  transition-delay: 0.5s; /* Retraso para escalera-1 */
+}
+
+/* Animación para la segunda escalera */
+.escalera-2 {
+  transition-delay: 1s; /* Retraso para escalera-2 */
+}
+
+/* Cuando la clase .show se agrega al contenedor .escalera */
+.escalera.show {
+  opacity: 1; /* Hace que el elemento sea visible */
+  transform: translateY(0); /* Vuelve a la posición original */
 }

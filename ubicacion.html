@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Invitacion</title>
+  </head>
+
+  <body class="bg-web">
+    <!-- ----- -->
+
+    <!-- FONDO -->
+    <div class="relative h-screen w-screen overflow-hidden">
+      <!-- Fondo con imágenes -->
+      <div class="absolute inset-0">
+        <!-- Imagen superior izquierda -->
+        <img
+          src="assets/img/sup-izq-1-02.svg"
+          alt="Imagen Superior Izquierda"
+          class="absolute top-0 left-0 h-1/4 object-contain"
+        />
+
+        <!-- Imagen superior derecha -->
+        <img
+          src="assets/img/sup-der-1-06.svg"
+          alt="Imagen Superior Derecha"
+          class="absolute top-0 right-0 h-1/4 object-contain"
+        />
+
+        <!-- Imagen inferior izquierda -->
+        <img
+          src="assets/img/inf-izq-04.svg"
+          alt="Imagen Inferior Izquierda"
+          class="absolute bottom-0 left-0 h-1/4 object-contain"
+        />
+
+        <!-- Imagen inferior derecha -->
+        <img
+          src="assets/img/inf-der-05.svg"
+          alt="Imagen Inferior Derecha"
+          class="absolute bottom-0 right-0 h-1/4 object-contain"
+        />
+      </div>
+      <!-- ---------------------------------------------- -->
+      <!-- Contenedor del texto (encima de las imágenes) -->
+      <div class="relative z-20 flex flex-col justify-center items-center">
+        <!-- ------------------------- -->
+        <!-- mapa -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13135.106066267172!2d-58.3637716!3d-34.6098123!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a335a780bb0a43%3A0xa51dfe261863a064!2sJano&#39;s%20Puerto%20Madero!5e0!3m2!1ses-419!2sar!4v1731379152170!5m2!1ses-419!2sar"
+          width="400"
+          height="300"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          class="rounded-lg bg-gray-300 p-4"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+
+        <!-- ------------------------- -->
+
+        <button
+          class="mt-5 px-4 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+        >
+          Siguiente
+        </button>
+      </div>
+
+      <!-- ---------------------------------------------- -->
+    </div>
+
+    <!-- JS -->
+    <script src="animacion.js"></script>
+  </body>
+</html>

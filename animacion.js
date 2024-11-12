@@ -1,42 +1,41 @@
-const foco1 = document.getElementById('foco1-el');
-const foco2 = document.getElementById('foco2-el');
-const foco3 = document.getElementById('foco3-el');
-const foco4 = document.getElementById('foco4-el');
-const foco5 = document.getElementById('foco5-el');
-const foco6 = document.getElementById('foco6-el');
+// H1
+document.addEventListener('DOMContentLoaded', () => {
+  const elements = document.querySelectorAll('.text-anim');
 
-// Función para mover los focos de forma aleatoria dentro de la pantalla
-function moverFoco(foco, velocidad) {
-  // Inicializa las posiciones aleatorias
-  let posX = Math.random() * (window.innerWidth - foco.offsetWidth);
-  let posY = Math.random() * (window.innerHeight - foco.offsetHeight);
+  // Ejecuta la animación inmediatamente cuando se carga la página
+  elements.forEach((el, index) => {
+    setTimeout(() => {
+      el.classList.add('animate__fadeInUp');
+      el.classList.remove('invisible');
+    }, index * 75); // Controla el retraso entre los elementos para la cascada
+  });
+});
 
-  // Posiciona el foco en su ubicación inicial
-  foco.style.left = `${posX}px`;
-  foco.style.top = `${posY}px`;
+// FECHA
+document.addEventListener('DOMContentLoaded', function () {
+  // Seleccionamos los elementos con las clases escalera-1 y escalera-2
+  const escaleras = document.querySelectorAll('.escalera-1, .escalera-2');
 
-  // Movimiento suave y aleatorio
-  function movimiento() {
-    // Movimiento aleatorio en ambas direcciones (X, Y)
-    posX += (Math.random() - 0.5) * velocidad;
-    posY += (Math.random() - 0.5) * velocidad;
+  // Creamos el IntersectionObserver
+  const obs = new IntersectionObserver(
+    function (entries) {
+      entries.forEach((entry) => {
+        // Si el elemento está en el viewport, agregamos la clase 'show'
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        } else {
+          // Si el elemento ya no está en el viewport, removemos la clase 'show'
+          entry.target.classList.remove('show');
+        }
+      });
+    },
+    {
+      threshold: 0.5, // 50% del elemento debe ser visible para activar la animación
+    }
+  );
 
-    posX = Math.max(0, Math.min(window.innerWidth - foco.offsetWidth, posX));
-    posY = Math.max(0, Math.min(window.innerHeight - foco.offsetHeight, posY));
-
-    foco.style.transition = 'left 1s ease-out, top 1s ease-out'; // Aquí se aplica la transición
-
-    foco.style.left = `${posX}px`;
-    foco.style.top = `${posY}px`;
-
-    requestAnimationFrame(movimiento);
-  }
-
-  // Inicia el movimiento
-  movimiento();
-}
-
-// Llama a la función de movimiento
-moverFoco(foco1, 5);
-moverFoco(foco2, 6);
-moverFoco(foco3, 10);
+  // Observamos cada uno de los elementos
+  escaleras.forEach((escalera) => {
+    obs.observe(escalera);
+  });
+});
