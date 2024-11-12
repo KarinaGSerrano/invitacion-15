@@ -25,13 +25,57 @@
   filter: drop-shadow(0 3px 4px rgba(25, 2, 2, 0.623));
 }
 
-/* OTROS */
+.color-6 {
+  color: #ad8a7f;
+}
 
-body {
+/* FUENTES */
+
+.fuente-1 {
   font-family: 'Playfair Display', serif;
   font-weight: 500;
   font-style: italic;
 }
+
+.fuente-2 {
+  font-family: 'Nunito', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.size-1 {
+  font-size: 10rem;
+}
+
+.size-2 {
+  font-size: 2rem;
+}
+
+.size-3 {
+  font-size: 3rem;
+}
+
+.size-4 {
+  font-size: 1.5rem;
+}
+
+.size-5 {
+  font-size: 1.1rem;
+}
+
+/* BORDES */
+.borde-1 {
+  border: 3px solid #ce959360;
+}
+
+/* OTROS */
+
+/* body {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-style: italic;
+} */
 
 .bg-web {
   background: #f3edea;
@@ -39,6 +83,10 @@ body {
 
 .sombra-1 {
   filter: drop-shadow(0 5px 20px rgba(255, 238, 253, 0.83));
+}
+
+.sombra-2 {
+  filter: drop-shadow(0 5px 20px rgb(159, 30, 144));
 }
 
 /* .bg-web {
@@ -73,15 +121,7 @@ body {
 
 /*  */
 
-.size-1 {
-  font-size: 10rem;
-}
-
-.size-2 {
-  font-size: 2rem;
-}
-
-/* ANIMACION */
+/*------------- ANIMACION----------------- */
 
 .animate__fadeInUp {
   animation-duration: 2s;
@@ -92,9 +132,23 @@ body {
 } */
 
 .animate__pulse {
+  animation-name: pulse-custom;
   animation-duration: 2s;
-  animation-delay: s;
   animation-timing-function: ease-in-out;
+}
+
+@keyframes pulse-custom {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(
+      1.2
+    ); /* Ajusta este valor para aumentar o disminuir la expansión */
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .opacity-0 {
@@ -103,31 +157,28 @@ body {
 
 /* Clases de animación para fadeInUp */
 .animate__animated {
-  animation-duration: 1s; /* Ajusta el tiempo de animación si es necesario */
+  animation-duration: 1s;
 }
 
 /* escalera */
 
-/* SELECTORES ANIMACION ESCALERA */
-
 .escalera {
-  opacity: 0; /* Elemento invisible al principio */
-  transform: translateY(30px); /* Inicialmente, desplazados hacia abajo */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Animaciones suaves */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 /* Animación para la primera escalera */
 .escalera-1 {
-  transition-delay: 0.5s; /* Retraso para escalera-1 */
+  transition-delay: 0.5s;
 }
 
 /* Animación para la segunda escalera */
 .escalera-2 {
-  transition-delay: 1s; /* Retraso para escalera-2 */
+  transition-delay: 1s;
 }
 
-/* Cuando la clase .show se agrega al contenedor .escalera */
 .escalera.show {
-  opacity: 1; /* Hace que el elemento sea visible */
-  transform: translateY(0); /* Vuelve a la posición original */
+  opacity: 1;
+  transform: translateY(0);
 }
