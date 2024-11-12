@@ -49,10 +49,28 @@
       />
     </div>
 
+    <!-- NAV -->
+
+    <nav
+      class="fixed right-4 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4"
+    >
+      <button class="w-10 h-10 bg-blue-500 text-white rounded-full shadow-lg">
+        1
+      </button>
+      <button class="w-10 h-10 bg-red-500 text-white rounded-full shadow-lg">
+        2
+      </button>
+      <button class="w-10 h-10 bg-green-500 text-white rounded-full shadow-lg">
+        3
+      </button>
+    </nav>
+
     <!-- CONTENIDO DESPLAZABLE -->
-    <div class="relative z-10 flex flex-col items-center space-y-20 py-20 m-14">
+    <div
+      class="relative z-10 flex flex-col items-center space-y-20 mx-14 py-20"
+    >
       <!-- Primer bloque de contenido -->
-      <div id="bloque1" class="flex flex-col justify-center items-center">
+      <div id="bloque1" class="flex flex-col justify-center items-center mb-20">
         <h1>
           <span class="text-anim">Mis</span>
           <span class="text-anim size-1">15</span>
@@ -79,7 +97,7 @@
 
         <a
           href="#bloque2"
-          class="animate__animated animate__pulse animate__infinite mt-5 px-4 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+          class="animate__animated animate__pulse animate__infinite mt-14 px-4 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
         >
           V
         </a>
@@ -96,8 +114,7 @@
         <div class="relative z-20 flex flex-col justify-center items-center">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13135.106066267172!2d-58.3637716!3d-34.6098123!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a335a780bb0a43%3A0xa51dfe261863a064!2sJano&#39;s%20Puerto%20Madero!5e0!3m2!1ses-419!2sar!4v1731379152170!5m2!1ses-419!2sar"
-            width="400"
-            height="300"
+            height="250"
             style="border: 0"
             allowfullscreen=""
             loading="lazy"
@@ -108,7 +125,7 @@
 
           <a
             href="#bloque3"
-            class="mt-5 px-4 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+            class="animate__animated animate__pulse animate__infinite mb-20 mt-14 px-4 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
           >
             V
           </a>
@@ -127,7 +144,7 @@
         <p>¡No faltes! te espero c:</p>
 
         <button
-          class="mt-5 px-4 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+          class="animate__animated animate__pulse animate__infinite mb-20 mt-14 px-4 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
         >
           V
         </button>
@@ -136,6 +153,6 @@
     </div>
 
     <!-- JS -->
-    <script src="animacion.js"></script>
+    <script src="animacion.js" defer></script>
   </body>
 </html>
