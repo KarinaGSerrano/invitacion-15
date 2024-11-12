@@ -56,8 +56,19 @@ body {
   background-repeat: no-repeat;
 } */
 
+/* BUTTONS */
 .btn-1 {
   filter: drop-shadow(-4px 1px 3px rgba(25, 2, 2, 0.727));
+}
+
+.btn-nav {
+  background: linear-gradient(
+    180deg,
+    rgb(222, 181, 190) 33%,
+    rgb(235, 204, 222) 89%
+  );
+
+  filter: drop-shadow(0px 1px 4px rgba(62, 24, 8, 0.462));
 }
 
 /*  */
