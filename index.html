@@ -24,43 +24,89 @@
 
     <!-- FONDO -->
     <div class="relative h-screen w-screen overflow-hidden">
-      <!-- Imagen superior izquierda -->
-      <img
-        src="assets/img/sup-izq-1-02.svg"
-        alt="Imagen Superior Izquierda"
-        class="absolute top-0 left-0 h-1/4 object-contain"
-      />
+      <!-- Fondo con imágenes -->
+      <div class="absolute inset-0">
+        <!-- Imagen superior izquierda -->
+        <img
+          src="assets/img/sup-izq-1-02.svg"
+          alt="Imagen Superior Izquierda"
+          class="absolute top-0 left-0 h-1/4 object-contain"
+        />
 
-      <!-- Imagen superior derecha -->
-      <img
-        src="assets/img/sup-der-1-06.svg"
-        alt="Imagen Superior Derecha"
-        class="absolute top-0 right-0 h-1/4 object-contain"
-      />
+        <!-- Imagen superior derecha -->
+        <img
+          src="assets/img/sup-der-1-06.svg"
+          alt="Imagen Superior Derecha"
+          class="absolute top-0 right-0 h-1/4 object-contain"
+        />
 
-      <!-- Imagen inferior izquierda -->
-      <img
-        src="assets/img/inf-izq-04.svg"
-        alt="Imagen Inferior Izquierda"
-        class="absolute bottom-0 left-0 h-1/4 object-contain"
-      />
+        <!-- Imagen inferior izquierda -->
+        <img
+          src="assets/img/inf-izq-04.svg"
+          alt="Imagen Inferior Izquierda"
+          class="absolute bottom-0 left-0 h-1/4 object-contain"
+        />
 
-      <!-- Imagen inferior derecha -->
-      <img
-        src="assets/img/inf-der-05.svg"
-        alt="Imagen Inferior Derecha"
-        class="absolute bottom-0 right-0 h-1/4 object-contain"
-      />
+        <!-- Imagen inferior derecha -->
+        <img
+          src="assets/img/inf-der-05.svg"
+          alt="Imagen Inferior Derecha"
+          class="absolute bottom-0 right-0 h-1/4 object-contain"
+        />
+      </div>
+      <!-- ---------------------------------------------- -->
+      <!-- Contenedor del texto (encima de las imágenes) -->
+      <div class="z-10 flex flex-col justify-center items-center">
+        <div class="">
+          <h1>
+            <span>Mis</span>
+            <span class="size-1">15</span>
+            <span>Años</span>
+          </h1>
+        </div>
+
+        <h2>Victoria Hrebacka</h2>
+
+        <p class="mt-5">Acompañame a celebrar este día tan especial.</p>
+
+        <!-- ------------ -->
+        <div class="flex flex-row gap-5 items-center mt-5">
+          <div class="flex flex-col items-center">
+            <p>Sábado</p>
+            <p>20</p>
+            <p>Diciembre</p>
+          </div>
+
+          <!-- Línea de separación vertical -->
+          <div class="h-10 border-l border-gray-300 mx-5"></div>
+
+          <div class="flex flex-col items-center">
+            <p>21:30 hs</p>
+            <p>a</p>
+            <p>5:30 hs</p>
+          </div>
+        </div>
+
+        <!-- ------------------------- -->
+
+        <button
+          class="mt-5 px-4 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+        >
+          Ver ubicación
+        </button>
+      </div>
+
+      <!-- ---------------------------------------------- -->
     </div>
 
     <!-- JS -->
     <script src="animacion.js"></script>
-    <script>
+    <!-- <script>
       const playBtn = document.getElementById('playBtn');
       const playIcon = document.getElementById('playIcon');
       const myAudio = document.getElementById('myAudio');
 
-      // Rutas de los iconos
+ 
       const playIconPath = 'assets/img/icon-music.svg';
       const pauseIconPath = 'assets/img/icon-music-pause.svg';
 
@@ -75,6 +121,6 @@
           playIcon.alt = 'Reproducir';
         }
       });
-    </script>
+    </script> -->
   </body>
 </html>

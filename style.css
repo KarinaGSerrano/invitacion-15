@@ -56,22 +56,12 @@ body {
   filter: drop-shadow(-4px 1px 3px rgba(25, 2, 2, 0.727));
 }
 
-/* Línea vertical izquierda */
-.linea-izquierda {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1px;
-  height: 100%;
-  background-color: black;
+/*  */
+
+.size-1 {
+  font-size: 10rem;
 }
 
-/* Línea vertical derecha */
-.linea-derecha {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 1px;
-  height: 100%;
-  background-color: black;
+.size-2 {
+  font-size: 2rem;
 }
