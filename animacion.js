@@ -39,3 +39,26 @@ document.addEventListener('DOMContentLoaded', function () {
     obs.observe(escalera);
   });
 });
+
+// A LINK NAVEGACIÓN ANIMACIÓN
+function scrollAndAnimate(event, sectionId) {
+  event.preventDefault();
+
+  // Selecciona la sección de destino
+  const section = document.getElementById(sectionId);
+
+  // Desplaza suavemente hacia la sección
+  section.scrollIntoView({ behavior: 'smooth' });
+
+  // Agrega la clase animate__fadeInDown y la clase de visibilidad
+  section.classList.add(
+    'animate__fadeInDown',
+    'animate__animated',
+    'opacity-100'
+  );
+
+  // Remueve la clase de animación después de un tiempo para permitir repetirla
+  setTimeout(() => {
+    section.classList.remove('animate__fadeInDown', 'animate__animated');
+  }, 1000); // Duración de la animación en ms
+}
