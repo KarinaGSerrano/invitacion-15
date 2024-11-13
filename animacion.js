@@ -41,24 +41,33 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // A LINK NAVEGACIÓN ANIMACIÓN
+// function scrollAndAnimate(event, sectionId) {
+//   event.preventDefault();
+
+//   const section = document.getElementById(sectionId);
+//   section.scrollIntoView({ behavior: 'smooth' });
+
+//   event.currentTarget.classList.add('animate__slideInDown');
+
+//   setTimeout(() => {
+//     event.currentTarget.classList.remove('animate__slideInDown');
+//   }, 1000);
+// }
+
 function scrollAndAnimate(event, sectionId) {
   event.preventDefault();
 
-  // Selecciona la sección de destino
   const section = document.getElementById(sectionId);
+  const link = event.currentTarget;
 
-  // Desplaza suavemente hacia la sección
+  // Desplaza suavemente a la sección
   section.scrollIntoView({ behavior: 'smooth' });
 
-  // Agrega la clase animate__fadeInDown y la clase de visibilidad
-  section.classList.add(
-    'animate__fadeInDown',
-    'animate__animated',
-    'opacity-100'
-  );
+  // Agrega la clase animate__slideInDown solo cuando se hace clic
+  link.classList.add('animate__slideInDown');
 
-  // Remueve la clase de animación después de un tiempo para permitir repetirla
+  // Remueve la clase animate__slideInDown después de la duración de la animación (1s)
   setTimeout(() => {
-    section.classList.remove('animate__fadeInDown', 'animate__animated');
-  }, 1000); // Duración de la animación en ms
+    link.classList.remove('animate__slideInDown');
+  }, 1000); // Duración en milisegundos
 }
