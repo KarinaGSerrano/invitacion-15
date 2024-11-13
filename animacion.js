@@ -71,3 +71,17 @@ function scrollAndAnimate(event, sectionId) {
     link.classList.remove('animate__slideInDown');
   }, 1000); // Duración en milisegundos
 }
+
+// BUTTON SHAKE
+
+const shakeButton = document.getElementById('shakeButton');
+
+setInterval(() => {
+  // Agregar la animación
+  shakeButton.classList.add('animate__shakeY');
+
+  // Remover la animación después de 1 segundo (duración de animate__shakeY)
+  setTimeout(() => {
+    shakeButton.classList.remove('animate__shakeY');
+  }, 1000); // Ajusta el tiempo si has personalizado la duración de la animación
+}, 10000); // 10000 ms = 10 segundos

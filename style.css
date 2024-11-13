@@ -42,6 +42,10 @@
   color: #9a695a;
 }
 
+.color-10 {
+  color: #cd8680;
+}
+
 /* FUENTES */
 
 .fuente-1 {
@@ -113,12 +117,26 @@
   );
 }
 
+.box {
+  background: linear-gradient(
+    180deg,
+    rgb(228, 202, 202) 20%,
+    rgb(228, 214, 210) 89%
+  );
+
+  /* filter: drop-shadow(0px 1px 4px rgba(62, 24, 8, 0.462)); */
+}
+
 .sombra-1 {
   filter: drop-shadow(0 3px 10px rgba(255, 238, 249, 0.972));
 }
 
 .sombra-2 {
   filter: drop-shadow(0 5px 20px rgb(159, 30, 144));
+}
+
+.sombra-3 {
+  filter: drop-shadow(0 3px 5px rgb(255, 220, 192));
 }
 
 /* .bg-web {

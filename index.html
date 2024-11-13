@@ -33,22 +33,22 @@
       <img
         src="assets/img/sup-izq-02.svg"
         alt="Imagen Superior Izquierda"
-        class="absolute top-0 left-0 h-1/4 object-contain opacity-50"
+        class="absolute top-0 left-0 h-1/5 object-contain opacity-50"
       />
       <img
         src="assets/img/sup-der-1-06.svg"
         alt="Imagen Superior Derecha"
-        class="absolute top-0 right-0 h-1/5 object-contain"
+        class="absolute top-0 right-0 h-1/6 object-contain"
       />
       <img
         src="assets/img/inf-izq.svg"
         alt="Imagen Inferior Izquierda"
-        class="absolute bottom-0 left-0 h-1/5 object-contain"
+        class="absolute bottom-0 left-0 h-1/6 object-contain"
       />
       <img
         src="assets/img/inf-der-05.svg"
         alt="Imagen Inferior Derecha"
-        class="absolute bottom-0 right-0 h-1/4 object-contain opacity-50"
+        class="absolute bottom-0 right-0 h-1/5 object-contain opacity-50"
       />
     </div>
 
@@ -71,6 +71,12 @@
         class="flex justify-center items-center w-9 h-9 text-white rounded-full btn-nav"
       >
         <img class="w-4" src="assets/img/icon-gift.svg" alt="15" />
+      </button>
+      <button
+        class="flex justify-center items-center w-9 h-9 text-white rounded-full btn-nav animate__animated"
+        id="shakeButton"
+      >
+        <img class="w-5" src="assets/img/icon-wsp.svg" alt="15" />
       </button>
     </nav>
 
@@ -123,30 +129,45 @@
       <!-- -------------------------------------------Segundo bloque de contenido -->
       <div
         id="bloque2"
-        class="flex flex-col justify-center items-center"
+        class="flex flex-col justify-center items-center h-screen text-center"
         style="animation-duration: 5s"
       >
-        <h2>¿Dónde celebro mi fiesta?</h2>
+        <h2 class="size-7 fuente-1 not-italic color-10 sombra-3">
+          ¿Dónde celebro mi fiesta?
+        </h2>
         <!-- <span class="size-1">15</span> -->
-        <span>Ubicación</span>
+        <div class="escalera escalera-1">
+          <p class="size-7 mt-5">En Salón de eventos</p>
+          <p class="font-semibold italic size-7 mb-8">Jano's Puerto Madero.</p>
+        </div>
+
+        <div class="escalera escalera-2">
+          <p class="size-7">
+            Calle
+            <span class="font-semibold italic"
+              >Olga Cossettini 1031, Caba.</span
+            >
+          </p>
+        </div>
 
         <!-- ----------mapa----------- -->
-        <div class="z-20 flex flex-col justify-center items-center">
+        <div class="z-20 flex flex-col justify-center items-center mt-8">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13135.106066267172!2d-58.3637716!3d-34.6098123!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a335a780bb0a43%3A0xa51dfe261863a064!2sJano&#39;s%20Puerto%20Madero!5e0!3m2!1ses-419!2sar!4v1731379152170!5m2!1ses-419!2sar"
             height="200"
-            width="89%"
+            width="91%"
             style="border: 0"
             allowfullscreen=""
             loading="lazy"
-            class="rounded-lg bg-gray-300 p-4"
+            class="rounded-lg box p-2"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
           <!-- ------------------------- -->
 
           <a
             href="#bloque3"
-            class="animate__animated animate__pulse animate__infinite mb-20 mt-14 px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+            class="animate__animated animate__pulse animate__infinite mt-14 px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all"
+            onclick="scrollAndAnimate(event, 'bloque3')"
           >
             <img
               class="w-12 sombra-2"
