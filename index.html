@@ -170,7 +170,7 @@
 
           <a
             href="#bloque3"
-            class="animate__animated animate__pulse animate__infinite mt-14 px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all"
+            class="animate__animated animate__pulse animate__infinite mt-11 px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all"
             onclick="scrollAndAnimate(event, 'bloque3')"
           >
             <img
@@ -185,13 +185,42 @@
 
       <!-- -----------------------------------------Tercer bloque de contenido -->
       <div id="bloque3" class="flex flex-col justify-center items-center">
-        <h2>Muchas Gracias por leer hasta aca</h2>
+        <!-- <h2>Un regalo especial</h2> -->
         <p class="mt-5">
-          Si deseás contribuir de otra manera, podes usar el siguiente alias de
-          cuenta bancaria: <strong>maria.la.del.barrio</strong>.
+          En caso de que quieras hacerme un regalo, te comparto mi alias
+          bancario: <strong>maria.la.del.barrio</strong>.
         </p>
 
-        <p>¡No faltes! te espero c:</p>
+        <!-- ------------------- -->
+
+        <div class="flex items-center space-x-2">
+          <!-- Campo de alias/CVU no editable -->
+          <input
+            type="text"
+            id="aliasInput"
+            value="alias_o_cvu"
+            class="w-full p-2 border border-gray-300 rounded-md text-gray-600 bg-gray-100 cursor-default"
+            readonly
+          />
+
+          <!-- Botón de copiar -->
+          <button
+            onclick="copiarAlPortapapeles()"
+            class="px-3 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+          >
+            Copiar
+          </button>
+        </div>
+
+        <!-- Notificación de copiado -->
+        <div
+          id="notification"
+          class="hidden p-2 mt-14 absolute bg-green-500 text-white rounded-md shadow-lg"
+        >
+          ¡Alias/CVU copiado!
+        </div>
+
+        <!-- ------------------- -->
 
         <button
           class="animate__animated animate__pulse animate__infinite mb-20 mt-14 px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"

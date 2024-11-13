@@ -85,3 +85,40 @@ setInterval(() => {
     shakeButton.classList.remove('animate__shakeY');
   }, 1000); // Ajusta el tiempo si has personalizado la duración de la animación
 }, 10000); // 10000 ms = 10 segundos
+
+// COPIADO PORTAPAPELES
+
+function copiarAlPortapapeles() {
+  const input = document.getElementById('aliasInput');
+  navigator.clipboard
+    .writeText(input.value) // Copia al portapapeles
+    .then(() => {
+      alert('¡Alias/CVU copiado al portapapeles!');
+    })
+    .catch((err) => {
+      console.error('Error al copiar:', err);
+      alert('Hubo un problema al copiar el texto.');
+    });
+}
+
+// NOTIFICACION COPIADO EN PORTAPAPELES
+
+function copiarAlPortapapeles() {
+  const input = document.getElementById('aliasInput');
+  navigator.clipboard
+    .writeText(input.value)
+    .then(() => {
+      mostrarNotificacion();
+    })
+    .catch((err) => {
+      console.error('Error al copiar:', err);
+    });
+}
+
+function mostrarNotificacion() {
+  const notification = document.getElementById('notification');
+  notification.classList.remove('hidden'); // Muestra la notificación
+  setTimeout(() => {
+    notification.classList.add('hidden'); // Oculta la notificación después de 3 segundos
+  }, 3000);
+}
