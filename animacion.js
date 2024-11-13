@@ -125,7 +125,57 @@ function mostrarNotificacion() {
 
 // CONFIRMACION POR WHATSAPP
 
-document.getElementById('sendBtn').addEventListener('click', function () {
+// document.getElementById('sendBtn').addEventListener('click', function () {
+//   const name = document.getElementById('nameInput').value.trim();
+
+//   if (name === '') {
+//     alert('Por favor, ingresa un nombre');
+//     return;
+//   }
+
+//   const phoneNumber = '1562303847'; // Reemplaza con el número de WhatsApp al que quieres enviar el mensaje
+//   const message = `¡Hola vicky! soy ${name}. Te confirmo que voy a asistir a tu fiesta.`;
+
+//   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+//     message
+//   )}`;
+
+//   window.open(whatsappUrl, '_blank');
+// });
+
+//
+
+// document.getElementById('sendBtn').addEventListener('click', function () {
+//   const name = document.getElementById('nameInput').value.trim();
+
+//   if (name === '') {
+//     alert('Por favor, ingresa un nombre');
+//     return;
+//   }
+
+//   // Número de teléfono de destino (asegúrate de que sea en formato internacional)
+//   const phoneNumber = '5491162303847'; // Cambia esto al número al que deseas enviar el mensaje
+
+//   // Mensaje predefinido que incluye el nombre del usuario
+//   const message = `¡Hola vicky! soy ${name}. Te confirmo que voy a asistir a tu fiesta.`;
+
+//   // Codificar el mensaje para la URL
+//   const encodedMessage = encodeURIComponent(message);
+
+//   // Construir la URL de WhatsApp
+//   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+//   // Usar un pequeño retraso antes de redirigir
+//   setTimeout(function () {
+//     window.location.href = whatsappUrl; // Redirigir directamente a WhatsApp
+//   }, 500); // Esperar medio segundo antes de redirigir
+// });
+
+//
+
+document.getElementById('sendBtn').addEventListener('click', function (event) {
+  event.preventDefault(); // Evita que el enlace se ejecute inmediatamente
+
   const name = document.getElementById('nameInput').value.trim();
 
   if (name === '') {
@@ -133,12 +183,94 @@ document.getElementById('sendBtn').addEventListener('click', function () {
     return;
   }
 
-  const phoneNumber = '1234567890'; // Reemplaza con el número de WhatsApp al que quieres enviar el mensaje
+  // Número de teléfono de destino (en formato internacional, sin +)
+  const phoneNumber = '5491162303847'; // Cambia esto al número de WhatsApp al que deseas enviar el mensaje
+
+  // Mensaje predefinido que incluye el nombre del usuario
   const message = `¡Hola vicky! soy ${name}. Te confirmo que voy a asistir a tu fiesta.`;
 
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-    message
-  )}`;
+  // Codificar el mensaje para la URL
+  const encodedMessage = encodeURIComponent(message);
 
+  // Construir la URL de WhatsApp
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+  // Asignar la URL al atributo href del enlace
+  // document.getElementById('sendBtn').setAttribute('href', whatsappUrl);
+
+  console.log(whatsappUrl);
+
+  // Open WhatsApp with the message
   window.open(whatsappUrl, '_blank');
 });
+
+// function sendMessage() {
+//   const name = document.getElementById('nameInput').value.trim();
+//   const phoneNumber = '5491162303847'; // El número de WhatsApp
+//   const message = `¡Hola vicky! soy ${name}. Te confirmo que voy a asistir a tu fiesta.`; // Si no hay nombre, mensaje por defecto
+//   const encodedMessage = encodeURIComponent(message);
+
+//   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+//   // Usar window.open en lugar de un enlace directo
+//   window.open(whatsappUrl, '_blank');
+// }
+
+// function sendMessage() {
+//   const name = document.getElementById('nameInput').value.trim(); // Obtiene el nombre del input
+//   const phoneNumber = '5491150893047'; // Número de WhatsApp al que enviar
+//   const message = name ? `Hi ${name}!` : 'Hi there!'; // Si el nombre está vacío, se manda un mensaje genérico
+//   const encodedMessage = encodeURIComponent(message); // Codifica el mensaje para la URL
+
+//   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`; // Genera la URL de WhatsApp
+
+//   // Usamos window.open() para abrir WhatsApp en una nueva ventana
+//   window.open(whatsappUrl, '_blank'); // Esto abre WhatsApp sin cerrar la ventana actual
+// }
+
+// function sendMessage(event) {
+//   // Prevenir el comportamiento predeterminado del botón (evitar recarga de página)
+//   event.preventDefault();
+
+//   // Obtener el valor del input
+//   const name = document.getElementById('nameInput').value.trim();
+//   const phoneNumber = '5491150893047'; // Número de WhatsApp
+//   const message = name ? `Hi ${name}!` : 'Hi there!'; // Mensaje con nombre o genérico
+//   const encodedMessage = encodeURIComponent(message); // Codificar el mensaje
+
+//   // Crear la URL de WhatsApp con el mensaje predefinido
+//   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+//   // Abrir WhatsApp en una nueva ventana o pestaña
+//   window.open(whatsappUrl, '_blank');
+// }
+
+//
+//
+//
+
+// document.getElementById('sendBtn').addEventListener('click', function () {
+//   const name = document.getElementById('nameInput').value.trim();
+
+//   if (name === '') {
+//     alert('Por favor, ingresa un nombre');
+//     return;
+//   }
+
+//   // Número de teléfono de destino (asegúrate de que sea en formato internacional)
+//   const phoneNumber = '5491162303847'; // Cambia esto al número al que deseas enviar el mensaje
+
+//   // Mensaje predefinido que incluye el nombre del usuario
+//   const message = `¡Hola vicky! soy ${name}. Te confirmo que voy a asistir a tu fiesta.`;
+
+//   // Codificar el mensaje para la URL
+//   const encodedMessage = encodeURIComponent(message);
+
+//   // Construir la URL de WhatsApp
+//   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+//   // Usar un pequeño retraso antes de redirigir
+//   setTimeout(function () {
+//     window.location.href = whatsappUrl; // Redirigir directamente a WhatsApp
+//   }, 500); // Esperar medio segundo antes de redirigir
+// });
