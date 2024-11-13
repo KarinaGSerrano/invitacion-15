@@ -122,3 +122,23 @@ function mostrarNotificacion() {
     notification.classList.add('hidden'); // Oculta la notificación después de 3 segundos
   }, 3000);
 }
+
+// CONFIRMACION POR WHATSAPP
+
+document.getElementById('sendBtn').addEventListener('click', function () {
+  const name = document.getElementById('nameInput').value.trim();
+
+  if (name === '') {
+    alert('Por favor, ingresa un nombre');
+    return;
+  }
+
+  const phoneNumber = '1234567890'; // Reemplaza con el número de WhatsApp al que quieres enviar el mensaje
+  const message = `¡Hola vicky! soy ${name}. Te confirmo que voy a asistir a tu fiesta.`;
+
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+    message
+  )}`;
+
+  window.open(whatsappUrl, '_blank');
+});
