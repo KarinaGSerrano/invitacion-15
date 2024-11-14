@@ -70,7 +70,7 @@ setInterval(() => {
   setTimeout(() => {
     shakeButton.classList.remove('animate__shakeY');
   }, 1000); // Ajusta el tiempo si has personalizado la duración de la animación
-}, 10000); // 10000 ms = 10 segundos
+}, 8000); // 10000 ms = 10 segundos
 
 // COPIADO PORTAPAPELES
 
@@ -140,4 +140,35 @@ document.getElementById('sendBtn').addEventListener('click', function (event) {
 
   // Open WhatsApp with the message
   window.open(whatsappUrl, '_blank');
+});
+
+// SCROLL NAV
+
+function scrollToSection(id) {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+// LOTTIE
+
+const animacion = lottie.loadAnimation({
+  container: document.getElementById('lottieContainer'), // Contenedor donde se renderizará la animación
+  renderer: 'svg',
+  loop: false,
+  autoplay: false,
+  path: 'assets/lottie/animation2.json',
+});
+
+// Iniciar o reiniciar la animación al hacer clic en el botón
+document.getElementById('animButton').addEventListener('click', () => {
+  console.log('Botón clickeado');
+  animacion.goToAndStop(0, true); // Reinicia la animación al inicio
+  animacion.play(); // Inicia la animación
+});
+
+// Redimensionar la animación si es necesario (cuando la ventana cambia de tamaño)
+window.addEventListener('resize', () => {
+  animacion.resize(); // Ajusta el tamaño de la animación al contenedor
 });
